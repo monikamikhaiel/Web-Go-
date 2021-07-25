@@ -2,6 +2,10 @@
   "ExpandedNodes": [
     ""
   ],
+<<<<<<< Updated upstream
   "SelectedNode": "\\k8smanifests",
+=======
+  "SelectedNode": "\\README.md",
+>>>>>>> Stashed changes
   "PreviewInSolutionExplorer": false
 }
