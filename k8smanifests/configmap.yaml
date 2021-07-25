@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+data: version=apline
+metadata:
+  creationTimestamp: null
+  name: nginx-version
+  namespace: demo
