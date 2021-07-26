@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-alpine
+  name: 
   namespace: argocd
 spec:
   destination:
@@ -11,7 +11,7 @@ spec:
   source:
     # path to the folder with the YAML manifests
     path: k8smanifests/
-    repoURL: https://github.com/monikamikhaiel/CI_CD_project
+    repoURL: https://github.com/monikamikhaiel/
     targetRevision: HEAD
   # Sync policy
   syncPolicy: {}
