@@ -11,13 +11,13 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
-	# extract the latest version of the code 
+# extract the latest version of the code 
       - name: Check out the repo
         uses: actions/checkout@v2
-		# execution environment for containers 
+# execution environment for containers 
       - name: set up QEMU
         uses: docker/setup_qemu_action@v1
-		# build the container 
+# build the container 
       - name: set up Docker buildx 
         uses: docker/setup_buildx_action@v1
       
