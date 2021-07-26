@@ -6,7 +6,7 @@
 name: Publish Docker image
 
 on: push 
-  jobs:
+jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
@@ -15,10 +15,10 @@ on: push
       - name: Check out the repo
         uses: actions/checkout@v2
 		# execution environment for containers 
-	  - name: set up QEMU
+      - name: set up QEMU
         uses: docker/setup_qemu_action@v1
 		# build the container 
-	  - name: set up Docker buildx 
+      - name: set up Docker buildx 
         uses: docker/setup_buildx_action@v1
       
       - name: Log in to Docker Hub
@@ -30,10 +30,10 @@ on: push
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
 
-        with:
-		# current repository 
-          context: ./webFiles
-		  file: ./webFiles/Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/HelloWorldGo:v0.1
+          with:
+# current repository 
+            context: ./webFiles
+	    file: ./webFiles/Dockerfile
+            push: true
+            tags: ${{ secrets.DOCKER_USERNAME }}/HelloWorldGo:v0.1
           #labels: ${{ steps.meta.outputs.labels }}
